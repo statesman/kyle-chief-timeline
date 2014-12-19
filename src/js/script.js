@@ -92,7 +92,7 @@ Timeline.prototype._groupsort = function() {
 
 	var grouped = _.chain(this.data)
 		.map(function(item) {
-			var date = moment(item.date, 'D-MMM-YY');
+			var date = moment(item.date, 'M/D/YYYY');
 			if(!date.isValid()) {
 				console.warn('Invalid date for', item.title);
 			}
