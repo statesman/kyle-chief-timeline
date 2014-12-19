@@ -11,7 +11,7 @@ var timelineData = [{
   "display_date": "2006",
   "photo_url": "assets/hurlston.jpg",
   "caption": " <span class='pull-right'>Photo by Glen Hurlston</span><br />Suzanne Hurlston in 2011",
-  "body": "Jeff Barnett and Suzanne Hurlston meet for the first time when she comes to Princeton PD to report someone had her property and wouldnâ€™t return it. Both unmarried, they begin a romantic affair several months later."
+  "body": "Jeff Barnett and Suzanne Hurlston meet for the first time when she comes to Princeton PD to report someone had her property and wouldn't return it. Both unmarried, they begin a romantic affair several months later."
 }, {
   "title": "Glen Hurlston and Suzanne Hurlston marry",
   "date": "1/1/2007",

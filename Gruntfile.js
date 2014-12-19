@@ -42,6 +42,7 @@ module.exports = function(grunt) {
             "bower_components/imagesloaded/imagesloaded.pkgd.js",
             "bower_components/moment/moment.js",
             "bower_components/underscore/underscore.js",
+            "bower_components/webfontloader/webfontloader.js",
             "build/templates.js",
             "src/js/script.js"
           ]

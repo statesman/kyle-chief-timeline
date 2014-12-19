@@ -35,7 +35,6 @@ var Timeline = function(el, data, options) {
 	this.$timeline.imagesLoaded()
 	  .done(function() {
 	    self._layout();
-			self._adjustLine();
 	  });
 
 	this.$el.find('.item a.open-close').click(function(e){
@@ -152,6 +151,7 @@ Timeline.prototype._renderItems = function() {
 		}, this)
 	}, this);
 
+	this._adjustLine();
 };
 
 /*
@@ -215,6 +215,8 @@ Timeline.prototype._layout = function() {
 			contentBottom = _.max([bottom(el), contentBottom]);
 		}
 	}, this));
+
+	this._adjustLine();
 };
 
 Timeline.prototype._setupControls = function() {
@@ -265,9 +267,26 @@ Timeline.prototype._adjustLine = function() {
 	this.$el.find('.line').height(last.position().top + last.find('.date').outerHeight());
 };
 
+var timeline;
+
+WebFont.load({
+	google: {
+		families: [
+			'Lusitana:700:latin',
+			'Merriweather:400,400italic:latin',
+			'Merriweather+Sans:400,400italic,700:latin'
+		]
+	},
+	active: function() {
+		if(typeof timeline !== "undefined") {
+			timeline._layout();
+		}
+	},
+	classes: false
+});
 
 $(function() {
-	new Timeline('#timeline', timelineData, {
+	timeline = new Timeline('#timeline', timelineData, {
 		controls: false
 	});
 });
