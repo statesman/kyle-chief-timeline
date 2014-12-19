@@ -58,7 +58,7 @@
     <header class="header">
       <h1>Timeline: Allegations against Kyle police chief Jeff Barnett</h1>
       <p class="author">Interactive by Andrew Chavez and Tony Plohetski, Austin American-Statesman</p>
-      <p>Eight months after Jeff Barnett settled into his new job as Kyle's police chief, a lawsuit claimed he had his old department in Princeton settle unfinished personal business by arranging for them to arrest his girlfriend’s husband on domestic violence charges.</p>
+      <p>Eight months after Jeff Barnett settled into his new job as Kyle's police chief, a lawsuit claimed he had his old department in Princeton settle unfinished personal business by arranging for it to arrest his girlfriend’s husband.</p>
       <p>Our timeline outlines the ensuing fallout and the nine years of events that now have the City of Kyle caught in the middle.</p>
     </header>
 
@@ -67,14 +67,6 @@
     </div>
   </div>
 
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/handlebars/handlebars.runtime.js"></script>
-  <script src="src/js/helpers.js"></script>
-  <script src="bower_components/tabletop/src/tabletop.js"></script>
-  <script src="bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
-  <script src="bower_components/moment/moment.js"></script>
-  <script src="bower_components/underscore/underscore.js"></script>
-  <script src="build/templates.js"></script>
-  <script src="src/js/script.js"></script>
+  <script src="dist/scripts.js"></script>
 </body>
 </html>

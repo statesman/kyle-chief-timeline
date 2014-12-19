@@ -1,9 +1,3 @@
-// Script variables
-var timelineConfig = {
-	key: '0AvZh5Gsgu1WvdFo5VjB3dnBhSlVzN2hxejdsNmpHTFE',
-	sheetName: 'Posts' // change to name of spreadsheet 'sheet' that contains the data
-};
-
 // A helper to get the bottom position of an el
 var bottom = function(el) {
 	return el.position().top + el.outerHeight(true);
@@ -98,7 +92,7 @@ Timeline.prototype._groupsort = function() {
 
 	var grouped = _.chain(this.data)
 		.map(function(item) {
-			var date = moment(item.date, 'MMMM D, YYYY');
+			var date = moment(item.date, 'D-MMM-YY');
 			if(!date.isValid()) {
 				console.warn('Invalid date for', item.title);
 			}
@@ -177,7 +171,7 @@ Timeline.prototype._layout = function() {
 		if(el.hasClass('group-marker')) {
 			el.css('top', contentBottom);
 
-			// Update our running content bottom every time we add a marker
+			// Update our running content bottom
 			contentBottom = bottom(el);
 
 			items = [];
@@ -273,24 +267,7 @@ Timeline.prototype._adjustLine = function() {
 
 
 $(function() {
-
-	/**
-	 * get data via Tabletop
-	 */
-	Tabletop.init({
-		key: timelineConfig.key,
-		callback: function(data, tabletop) {
-			new Timeline('#timeline', tabletop.sheets(timelineConfig.sheetName).all(), {
-				controls: false
-			});
-		},
-		wanted: [timelineConfig.sheetName],
-		postProcess: function(el){
-			el['timestamp'] = Date.parse(el['date']);
-			el['display_date'] = el['displaydate'];
-			el['read_more_url'] = el['readmoreurl'];
-			el['photo_url'] = el['photourl'];
-		}
+	new Timeline('#timeline', timelineData, {
+		controls: false
 	});
-
 });

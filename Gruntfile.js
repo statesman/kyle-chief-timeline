@@ -30,6 +30,25 @@ module.exports = function(grunt) {
       }
     },
 
+    // Use Uglify to bundle up a pym file for the home page
+    uglify: {
+      homepage: {
+        files: {
+          'dist/scripts.js': [
+            "src/data/timeline.js",
+            "bower_components/jquery/dist/jquery.js",
+            "bower_components/handlebars/handlebars.runtime.js",
+            "src/js/helpers.js",
+            "bower_components/imagesloaded/imagesloaded.pkgd.js",
+            "bower_components/moment/moment.js",
+            "bower_components/underscore/underscore.js",
+            "build/templates.js",
+            "src/js/script.js"
+          ]
+        }
+      }
+    },
+
     // Transpile LESS
     less: {
       options: {
@@ -53,7 +72,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['copy', 'handlebars', 'less']);
+  grunt.registerTask('default', ['copy', 'uglify', 'handlebars', 'less']);
 
 };
