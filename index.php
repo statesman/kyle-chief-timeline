@@ -32,7 +32,7 @@
   <meta name="twitter:image" content="<?php print $meta['thumbnail']; ?>" />
   <meta name="twitter:url" content="<?php print $meta['url']; ?>" />
 
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="dist/style.css">
   <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
