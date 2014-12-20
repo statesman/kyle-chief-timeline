@@ -66,7 +66,7 @@ var timelineData = [{
   "date": "1/1/2014",
   "display_date": "January",
   "photo_url": "assets/hurlston-lawsuit.jpg",
-  "caption": " <span class='pull-right'>Photo by Jay Janner / Statesman</span><br />Glen Hurlston's lawsuit was filed eight months after Barnett started in Kyle",
+  "caption": " <span class='pull-right'>Photo by Jay Janner / Statesman</span><br />Glen Hurlston's lawsuit was filed almost two years after Barnett started in Kyle",
   "body": "Glen Hurlston files a federal lawsuit against the towns of Princeton and Kyle alleging Barnett abused his power by ordering him arrested for domestic abuse."
 }, {
   "title": "Hurlstons divorce",
